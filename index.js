@@ -1,6 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav__link')
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
 
