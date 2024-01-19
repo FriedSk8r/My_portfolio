@@ -20,10 +20,13 @@ clickableItems.forEach(item => {
 // Add click event listener to the navigation links
 document.querySelectorAll('.nav__link a').forEach(link => {
     link.addEventListener('click', (event) => {
-        event.preventDefault();
         const target = link.getAttribute('href');
-        if (target) {
-            window.location.href = target;
+        if (target && target.startsWith('#')) {
+            event.preventDefault();
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
