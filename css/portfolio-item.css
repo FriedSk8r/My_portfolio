@@ -1,0 +1,35 @@
+/* portfolio-item.css */
+
+/* Import the common styles from styles.css */
+@import url('css/styles.css');
+
+/* Additional styles for the individual portfolio item page */
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio-item-individual a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item-individual img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #16e0bd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item-individual:hover img {
+    transform: scale(1.1);
+}
+
+/* Add any additional styles specific to your individual portfolio items */
