@@ -28,8 +28,14 @@ document.querySelectorAll('.nav__link a').forEach(link => {
             }
         } else if (target && !target.startsWith('http')) {
             event.preventDefault();
-            window.location.href = target;
+            if (target === 'index.html') {
+                window.location.href = 'index.html#home';
+                window.location.href = 'index.html#services';
+                window.location.href = 'index.html#about';
+                window.location.href = 'index.html#work';
+            } else {
+                window.location.href = target;
+            }
         }
     });
 });
-
