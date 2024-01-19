@@ -1,0 +1,49 @@
+/* portfolio-item.css */
+
+/* Import the common styles from styles.css */
+@import url('styles.css');
+
+/* Additional styles for the individual portfolio item page */
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+.portfolio-item-individual img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #16e0bd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item-individual:hover img {
+    transform: scale(1.1);
+}
+
+/* Add any additional styles specific to your individual portfolio items */
+
+/* Make the link visible */
+.portfolio-item-individual a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #16e0bd; /* Set link color */
+    text-decoration: none;
+}
+
+/* Optional: Add styles for visited links */
+.portfolio-item-individual a:visited {
+    color: #16e0bd;
+}
+
+/* Optional: Add styles for the link on hover */
+.portfolio-item-individual a:hover {
+    text-decoration: underline;
+}
