@@ -1,10 +1,4 @@
-function toggleMenu() {
-    const menuIcon = document.querySelector('.menu-icon');
-    const navbarLinks = document.querySelector('.navbar');
 
-    navbarLinks.classList.toggle('active');
-    menuIcon.classList.toggle('active');
-}
 
 // Add click event listener to portfolio items
 document.querySelectorAll('.clickable').forEach(item => {
@@ -30,12 +24,18 @@ document.querySelectorAll('.nav__link a').forEach(link => {
             event.preventDefault();
             if (target === 'index.html') {
                 window.location.href = 'index.html#home';
-                window.location.href = 'index.html#services';
-                window.location.href = 'index.html#about';
-                window.location.href = 'index.html#work';
             } else {
                 window.location.href = target;
             }
         }
     });
 });
+
+// Toggle menu visibility
+function toggleMenu() {
+    const menu = document.querySelector('.nav');
+    menu.classList.toggle('nav--visible');
+}
+
+// Add click event listener to the menu icon
+document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
